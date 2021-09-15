@@ -40,7 +40,7 @@ See log form pod
 
 Read from Kafka
 
-    kafka-console-consumer --bootstrap-server localhost:9092 --topic random-number-1-v1 --group somegroup
+    kafka-console-consumer --bootstrap-server localhost:9092 --topic random-number-1-v1 --property key=value --property print.key=true --property key.separator="-" --from-beginning
 
 Stop Kafka
 
