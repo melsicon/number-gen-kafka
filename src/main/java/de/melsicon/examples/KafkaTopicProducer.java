@@ -8,5 +8,5 @@ import io.micronaut.configuration.kafka.annotation.Topic;
 public interface KafkaTopicProducer {
 
         @Topic("random-number-1-v1")
-        void sendProduct(@KafkaKey String key, long value);
+        void sendProduct(@KafkaKey String key, String value);
 }

@@ -38,6 +38,10 @@ See log form pod
     
     kubectl logs number-gen-kafka-<something-something> -n dev -f
 
+Read from Kafka
+
+    kafka-console-consumer --bootstrap-server localhost:9092 --topic random-number-1-v1 --group somegroup
+
 Stop Kafka
 
     zookeeper-server-stop && kafka-server-stop

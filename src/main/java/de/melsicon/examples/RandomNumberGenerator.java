@@ -24,7 +24,7 @@ public class RandomNumberGenerator {
         while (true) {
             long number = rand.nextLong();
             log.info("{}. random number: {}", counter, number);
-            kafkaTopicProducer.sendProduct("" + counter, number);
+            kafkaTopicProducer.sendProduct("" + counter, "" + number);
             counter++;
             Thread.sleep(5000);
         }
