@@ -8,6 +8,11 @@ micronaut:
         descriptions: true
         step: PT1M
     enabled: true
+  health:
+    enabled: true
+    sensitive: false
+    url:
+      enabled: true
 
 #kafka.bootstrap.servers: localhost:9092
 kafka.bootstrap.servers: host.docker.internal:9092

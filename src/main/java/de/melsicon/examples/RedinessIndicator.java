@@ -3,11 +3,13 @@ package de.melsicon.examples;
 import io.micronaut.health.HealthStatus;
 import io.micronaut.management.health.indicator.HealthIndicator;
 import io.micronaut.management.health.indicator.HealthResult;
+import io.micronaut.management.health.indicator.annotation.Liveness;
 import io.reactivex.Flowable;
+import jakarta.inject.Singleton;
 import org.reactivestreams.Publisher;
 
-//@Singleton
-//@Liveness
+@Singleton
+@Liveness
 public class RedinessIndicator implements HealthIndicator {
 
     @Override
