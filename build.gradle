@@ -37,16 +37,14 @@ dependencies {
 
 }
 
-
 application {
     mainClass.set("de.melsicon.examples.Application")
 }
+
 java {
     sourceCompatibility = JavaVersion.toVersion("11")
     targetCompatibility = JavaVersion.toVersion("11")
 }
-
-
 
 jib {
     to {
