@@ -48,6 +48,10 @@ java {
 
 jib {
     to {
-        image = "docker.io/lehwwmcrnjnhzjaglr/number-gen-kafka"
+        image = "docker.io/${dockerHubUser}/number-gen-kafka"
+        auth {
+            username = dockerHubUser
+            password = dockerHubPassword
+        }
     }
 }

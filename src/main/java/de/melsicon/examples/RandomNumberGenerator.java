@@ -20,9 +20,10 @@ public class RandomNumberGenerator {
     @EventListener
     public void onStartupEvent(StartupEvent event) throws InterruptedException {
         Random rand = new Random();
+        int upperBound = 9999;
         long counter = 1;
         while (true) {
-            long number = rand.nextLong();
+            int number = rand.nextInt(upperBound);
             log.info("{}. random number: {}", counter, number);
             kafkaTopicProducer.sendProduct("" + counter, "" + number);
             counter++;
